@@ -5,6 +5,7 @@ import time
 from datetime import datetime, timedelta
 import json
 import polyline
+import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dotenv import load_dotenv
 
@@ -48,17 +49,19 @@ def get_route(origin, destination):
     except googlemaps.exceptions.ApiError as e:
         print(f"Google Maps API error: {e}")
         return []
+    
 
 def simulate_train_route(train_data, speed_kmph, start_time):
     """Simulate the train moving along the route at a certain speed."""
-    train_id = train_data['properties']['route']
+    # Get the train_id as an integer from the properties
+    train_id = train_data['properties']['train_id']  # Use the numerical train_id from the input file
     origin_coords = train_data['geometry']['coordinates'][0]
     destination_coords = train_data['geometry']['coordinates'][-1]
 
     origin = {'latitude': origin_coords[1], 'longitude': origin_coords[0]}
     destination = {'latitude': destination_coords[1], 'longitude': destination_coords[0]}
     
-    print(f"Simulating route: {train_id}")
+    print(f"Simulating route for train ID: {train_id}")
     
     route = get_route(origin, destination)
 
@@ -68,7 +71,7 @@ def simulate_train_route(train_data, speed_kmph, start_time):
     geojson_route = {
         "type": "Feature",
         "properties": {
-            "train_id": train_id,
+            "train_id": train_id,  # Use the integer train_id from the input file
             "timestamps": [],
             "start_time": start_time.isoformat()
         },
@@ -118,8 +121,23 @@ def simulate_train_route(train_data, speed_kmph, start_time):
     
     return geojson_route
 
-def generate_train_data(output_file, num_simultaneous_trains=5):
-    """Generate train tracking data for multiple trains concurrently."""
+
+def send_data_to_backend(data):
+    """Send the generated train tracking data to the backend."""
+    url = "http://localhost:3001/api/gpsdata"
+    headers = {'Content-Type': 'application/json'}
+    try:
+        response = requests.post(url, headers=headers, json=data)
+        if response.status_code == 200:
+            print("Data successfully sent to the backend.")
+        else:
+            print(f"Failed to send data. Status code: {response.status_code}, Response: {response.text}")
+    except Exception as e:
+        print(f"Error sending data to backend: {e}")
+
+
+def generate_train_data(output_file=None, num_simultaneous_trains=5):
+    """Generate train tracking data for multiple trains concurrently and send to backend."""
     trains_data = []
     start_time = datetime.now()
     
@@ -135,11 +153,19 @@ def generate_train_data(output_file, num_simultaneous_trains=5):
                 trains_data.append(result)
     
     if trains_data:
-        with open(output_file, 'w', encoding='utf-8') as f:
-            geojson.dump(geojson.FeatureCollection(trains_data), f)
-        print(f"Data written to {output_file}")
+        # Create a FeatureCollection from the generated data
+        data_to_send = geojson.FeatureCollection(trains_data)
+        
+        # Send the data to the backend
+        send_data_to_backend(data_to_send)
+        
+        # Optionally save to a file if an output file is provided
+        if output_file:
+            with open(output_file, 'w', encoding='utf-8') as f:
+                geojson.dump(data_to_send, f)
+            print(f"Data written to {output_file}")
     else:
-        print("No data to write.")
+        print("No data to write or send.")
 
 # Configuration
 TRAIN_SPEED_KMPH = 160  # Adjust speed as needed
