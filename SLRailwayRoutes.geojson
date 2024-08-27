@@ -1,0 +1,516 @@
+{
+    "type": "FeatureCollection",
+    "name": "hotosm_lka_railways_points_geojson",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 1,
+          "name": "Kandy to Colombo",
+          "origin": "Kandy",
+          "destination": "Colombo",
+          "route": "Kandy to Colombo"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.6361, 7.2906],
+            [79.8612, 6.9271]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 2,
+          "name": "Colombo to Galle",
+          "origin": "Colombo",
+          "destination": "Galle",
+          "route": "Colombo to Galle"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [80.2170, 6.0392]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 3,
+          "name": "Galle to Matara",
+          "origin": "Galle",
+          "destination": "Matara",
+          "route": "Galle to Matara"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.2170, 6.0392],
+            [80.5353, 5.9485]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 4,
+          "name": "Colombo to Badulla",
+          "origin": "Colombo",
+          "destination": "Badulla",
+          "route": "Colombo to Badulla"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [81.0564, 6.9917]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 5,
+          "name": "Badulla to Nanu Oya",
+          "origin": "Badulla",
+          "destination": "Nanu Oya",
+          "route": "Badulla to Nanu Oya"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [81.0564, 6.9917],
+            [80.7440, 6.9391]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 6,
+          "name": "Colombo to Anuradhapura",
+          "origin": "Colombo",
+          "destination": "Anuradhapura",
+          "route": "Colombo to Anuradhapura"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [80.4144, 8.3114]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 7,
+          "name": "Anuradhapura to Jaffna",
+          "origin": "Anuradhapura",
+          "destination": "Jaffna",
+          "route": "Anuradhapura to Jaffna"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.4144, 8.3114],
+            [80.0084, 9.6615]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 8,
+          "name": "Colombo to Polonnaruwa",
+          "origin": "Colombo",
+          "destination": "Polonnaruwa",
+          "route": "Colombo to Polonnaruwa"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [81.0016, 7.9397]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 9,
+          "name": "Polonnaruwa to Batticaloa",
+          "origin": "Polonnaruwa",
+          "destination": "Batticaloa",
+          "route": "Polonnaruwa to Batticaloa"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [81.0016, 7.9397],
+            [81.6771, 7.7102]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 10,
+          "name": "Colombo to Trincomalee",
+          "origin": "Colombo",
+          "destination": "Trincomalee",
+          "route": "Colombo to Trincomalee"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [81.2332, 8.5682]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 11,
+          "name": "Colombo to Kandy",
+          "origin": "Colombo",
+          "destination": "Kandy",
+          "route": "Colombo to Kandy"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [80.6361, 7.2906]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 12,
+          "name": "Kandy to Hatton",
+          "origin": "Kandy",
+          "destination": "Hatton",
+          "route": "Kandy to Hatton"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.6361, 7.2906],
+            [80.6060, 6.8970]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 13,
+          "name": "Hatton to Nuwara Eliya",
+          "origin": "Hatton",
+          "destination": "Nuwara Eliya",
+          "route": "Hatton to Nuwara Eliya"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.6060, 6.8970],
+            [80.7431, 6.9481]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 14,
+          "name": "Colombo to Negombo",
+          "origin": "Colombo",
+          "destination": "Negombo",
+          "route": "Colombo to Negombo"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [79.8417, 7.2006]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 15,
+          "name": "Colombo to Puttalam",
+          "origin": "Colombo",
+          "destination": "Puttalam",
+          "route": "Colombo to Puttalam"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [79.8343, 8.0322]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 16,
+          "name": "Colombo to Chilaw",
+          "origin": "Colombo",
+          "destination": "Chilaw",
+          "route": "Colombo to Chilaw"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [79.7911, 7.5755]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 17,
+          "name": "Colombo to Kurunegala",
+          "origin": "Colombo",
+          "destination": "Kurunegala",
+          "route": "Colombo to Kurunegala"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [80.3286, 7.4867]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 18,
+          "name": "Kurunegala to Polgahawela",
+          "origin": "Kurunegala",
+          "destination": "Polgahawela",
+          "route": "Kurunegala to Polgahawela"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.3286, 7.4867],
+            [80.3010, 7.3311]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 19,
+          "name": "Colombo to Avissawella",
+          "origin": "Colombo",
+          "destination": "Avissawella",
+          "route": "Colombo to Avissawella"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [80.2067, 6.9520]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 20,
+          "name": "Colombo to Ratnapura",
+          "origin": "Colombo",
+          "destination": "Ratnapura",
+          "route": "Colombo to Ratnapura"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [80.3847, 6.6828]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 21,
+          "name": "Colombo to Nawalapitiya",
+          "origin": "Colombo",
+          "destination": "Nawalapitiya",
+          "route": "Colombo to Nawalapitiya"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [80.5043, 7.0463]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 22,
+          "name": "Colombo to Gampaha",
+          "origin": "Colombo",
+          "destination": "Gampaha",
+          "route": "Colombo to Gampaha"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [80.0143, 7.0917]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 23,
+          "name": "Gampaha to Veyangoda",
+          "origin": "Gampaha",
+          "destination": "Veyangoda",
+          "route": "Gampaha to Veyangoda"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.0143, 7.0917],
+            [80.0971, 7.1840]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 24,
+          "name": "Colombo to Kegalle",
+          "origin": "Colombo",
+          "destination": "Kegalle",
+          "route": "Colombo to Kegalle"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [80.3616, 7.2511]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 25,
+          "name": "Colombo to Ambepussa",
+          "origin": "Colombo",
+          "destination": "Ambepussa",
+          "route": "Colombo to Ambepussa"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [80.1694, 7.2560]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 26,
+          "name": "Colombo to Nanu Oya",
+          "origin": "Colombo",
+          "destination": "Nanu Oya",
+          "route": "Colombo to Nanu Oya"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [80.7440, 6.9391]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 27,
+          "name": "Colombo to Bandarawela",
+          "origin": "Colombo",
+          "destination": "Bandarawela",
+          "route": "Colombo to Bandarawela"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [81.0303, 6.8382]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 28,
+          "name": "Colombo to Ella",
+          "origin": "Colombo",
+          "destination": "Ella",
+          "route": "Colombo to Ella"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [79.8612, 6.9271],
+            [81.0468, 6.8750]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 29,
+          "name": "Kandy to Nuwara Eliya",
+          "origin": "Kandy",
+          "destination": "Nuwara Eliya",
+          "route": "Kandy to Nuwara Eliya"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.6361, 7.2906],
+            [80.7431, 6.9481]
+          ]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "train_id": 30,
+          "name": "Kandy to Peradeniya",
+          "origin": "Kandy",
+          "destination": "Peradeniya",
+          "route": "Kandy to Peradeniya"
+        },
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [80.6361, 7.2906],
+            [80.5904, 7.2575]
+          ]
+        }
+      }
+    ]
+  }
