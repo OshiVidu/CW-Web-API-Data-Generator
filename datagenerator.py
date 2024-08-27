@@ -1,3 +1,4 @@
+import os
 import googlemaps
 import geojson
 import time
@@ -5,9 +6,13 @@ from datetime import datetime, timedelta
 import json
 import polyline
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from dotenv import load_dotenv
 
-# Initialize Google Maps client
-gmaps = googlemaps.Client(key='GOOGLE_MAPS_API_KEY')
+# Load environment variables from .env file
+load_dotenv()
+
+# Initialize Google Maps client with the API key
+gmaps = googlemaps.Client(key=os.getenv('GOOGLE_MAPS_API_KEY'))
 
 # Load the GeoJSON file containing train routes
 with open('SLRailwayRoutes.geojson', encoding='utf-8') as f:
