@@ -7,7 +7,7 @@ import polyline
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Initialize Google Maps client
-gmaps = googlemaps.Client(key='AIzaSyCZx6VOP5bywLQx1vY8JjPX-YCFV8E9JZA')
+gmaps = googlemaps.Client(key='GOOGLE_MAPS_API_KEY')
 
 # Load the GeoJSON file containing train routes
 with open('SLRailwayRoutes.geojson', encoding='utf-8') as f:
