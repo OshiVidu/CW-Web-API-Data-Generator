@@ -4,10 +4,13 @@ import time
 import random
 from pymongo import MongoClient
 from geopy.distance import geodesic
+from datetime import datetime, timezone
 import geojson
 import os
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
+
+timestamp = datetime.now(timezone.utc).isoformat()
 
 # Load GeoJSON railway data
 file_path = 'C:\\Users\\Lenovo\\OneDrive\\Desktop\\CW-Web-API-Data-Generator\\data\\hotosm_lka_railways_lines_geojson.geojson'
@@ -63,25 +66,31 @@ def simulate_iot_data(train_id, train_name, route):
             nearest_position = find_nearest_point((next_latitude, next_longitude))
             previous_position = (next_longitude, next_latitude)
         
+        # Update timestamp for each iteration
+        timestamp = datetime.now(timezone.utc).isoformat()
+        
         # Simulate IoT data
-        data = {
+        data = [
+        {
             "train_id": train_id,
             "train_name": train_name,
             "latitude": nearest_position[0],
             "longitude": nearest_position[1],
-            "timestamp": time.time(),
+            "timestamp": timestamp,
             "speed": speed,  # Use the calculated speed
             "signal_strength": random.uniform(0, 100)  # Random signal strength between 0 and 100%
         }
+        ]
         
         # Send data to web API endpoint
-        api_endpoint = "http://your-api-endpoint.com/train_data"  # Replace with your actual API endpoint
+        api_endpoint = "http://localhost:3001/api/gpsdata"  # Replace with your actual API endpoint
         response = requests.post(api_endpoint, json=data)
-        if response.status_code == 200:
-            print(f"Sent IoT data: {data}")
+        if response.status_code == 201:
+            print(f"Successfully sent IoT data: {data}")
         else:
             print(f"Failed to send data: {response.status_code}, {response.text}")
         time.sleep(60)  # Wait for one minute
+
 
 def simulate_train_position(train_id, train_name, route):
     """
